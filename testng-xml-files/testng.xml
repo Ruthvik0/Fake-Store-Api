@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Complete Suite">
+	<listeners>
+		<listener class-name="org.ruthvik.listeners.ApiListeners" />
+	</listeners>
+	<test name="User Route Tests ">
+		<classes>
+			<class name="org.ruthvik.tests.UserRouteTests" />
+		</classes>
+	</test>
+	<test name="Auth Route Tests">
+		<classes>
+			<class name="org.ruthvik.tests.AuthRouteTests" />
+		</classes>
+	</test>
+	<test name="Category Route Tests">
+		<classes>
+			<class name="org.ruthvik.tests.CategoryRouteTests" />
+		</classes>
+	</test>
+	<test name="Products Route Tests">
+		<classes>
+			<class name="org.ruthvik.tests.ProductRouteTests" />
+		</classes>
+	</test>
+</suite> 

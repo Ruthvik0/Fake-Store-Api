@@ -1,0 +1,10 @@
+version: '3'
+services:
+  fake-store-api:
+    image: fake-store-api:1
+    environment:
+      - fileName=testng.xml
+    volumes:
+      - type: bind
+        source: ./reports
+        target: /home/fakestoreapi/reports 

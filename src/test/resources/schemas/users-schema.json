@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Users",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "number"
+      },
+      "email": {
+        "type": "string"
+      },
+      "password": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "role": {
+        "type": "string"
+      },
+      "avatar": {
+        "type": "string"
+      },
+      "creationAt": {
+        "type": "string"
+      },
+      "updatedAt": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "email",
+      "password",
+      "name",
+      "role",
+      "avatar",
+      "creationAt",
+      "updatedAt"
+    ]
+  }
+}

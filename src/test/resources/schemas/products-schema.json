@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Products Response",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "number"
+      },
+      "title": {
+        "type": "string"
+      },
+      "price": {
+        "type": "number"
+      },
+      "description": {
+        "type": "string"
+      },
+      "images": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "creationAt": {
+        "type": "string"
+      },
+      "updatedAt": {
+        "type": "string"
+      },
+      "category": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "name": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          },
+          "creationAt": {
+            "type": "string"
+          },
+          "updatedAt": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "image",
+          "creationAt",
+          "updatedAt"
+        ]
+      }
+    },
+    "required": [
+      "id",
+      "title",
+      "price",
+      "description",
+      "images",
+      "creationAt",
+      "updatedAt",
+      "category"
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+mvn clean test -Denv=prod -DfileName=testng.xml -Dgroups=positive
+
+##env
+	prod or test | default -> prod
+##fileName
+	testng.xml or users.xml or auth.xml | default -> testng.xml
+##groups
+	positive or negative | default -> none
