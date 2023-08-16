@@ -21,7 +21,7 @@ on:
         - testng.xml
         - users.xml
         - auth.xml
-        - product.xml
+        - categories.xml
       env:
         description: 'Select Environment to run'
         required: true
