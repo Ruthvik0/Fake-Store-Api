@@ -1,0 +1,48 @@
+
+name: runTest
+
+on:
+ workflow_dispatch:
+    inputs:
+      test-groups:
+        description: 'Test scenario groups'
+        required: false
+        default: ''
+        type: choice
+        options:
+        - positive
+        - negative
+      fileName:
+        description: 'TestNG suite files need to run'
+        required: true
+        default: 'testng.xml'
+        type: choice
+        options:
+        - testng.xml
+        - users.xml
+        - auth.xml
+        - product.xml
+      env:
+        description: 'Select Environment to run'
+        required: true
+        default: 'prod'
+        type: choice
+        options:
+        - prod
+        - test
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: maven
+    - name: Build with Maven
+      run : mvn clean test -Denv={{inputs.env}} -DfileName={{inputs.fileName}} -Dgroups={{inputs.test-groups}}
